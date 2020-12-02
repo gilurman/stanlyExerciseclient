@@ -1,0 +1,20 @@
+<h1>Add new book:</h1>
+
+<form class="example-form flex-container">
+  <mat-form-field>
+    <mat-label>name:</mat-label>
+    <input type="text" matInput placeholder="name" [(ngModel)]="newBook.name" [ngModelOptions]="{standalone:true}">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>author:</mat-label>
+    <input type="text" matInput placeholder="author" [(ngModel)]="newBook.author" [ngModelOptions]="{standalone:true}">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>quantity</mat-label>
+    <input matInput type="number" placeholder="quantity" [(ngModel)]="newBook.quantity"  [ngModelOptions]="{standalone:true}">
+  </mat-form-field>
+  <button class="mat-raised-button"(click)="close()">Close</button>
+  <button class="mat-raised-button mat-primary"(click)="AddNewBook()">Save</button>
+</form>
